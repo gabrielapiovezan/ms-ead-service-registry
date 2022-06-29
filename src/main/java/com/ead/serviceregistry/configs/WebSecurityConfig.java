@@ -12,7 +12,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Value("${ead.serviceRegistry.usarname}")
+    @Value("${ead.serviceRegistry.username}")
     private String username;
 
     @Value("${ead.serviceRegistry.password}")
