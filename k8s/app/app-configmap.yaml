@@ -1,0 +1,10 @@
+ apiVersion: v1
+ kind: ConfigMap
+ metadata:
+   name: ms-ead-service-registry
+   namespace: ead
+# data:
+#   EUREKA_USERNAME: serviceRegistry
+#   EUREKA_PASSWORD: "123456"
+#   EUREKA_URL: "myapp_pwd"
+#   APP_DOMAIN_NAME: 'http://serviceRegistry:ead.serviceRegistry.123456@localhost:8761/eureka'

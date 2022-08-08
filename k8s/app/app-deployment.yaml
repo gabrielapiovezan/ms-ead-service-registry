@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-ead-service-registry
+  namespace: ead
+  labels:
+    app: ms-ead-service-registry
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ms-ead-service-registry
+  template:
+    metadata:
+      labels:
+        app: ms-ead-service-registry
+    spec:
+      containers:
+        - name: ms-ead-service-registry
+          image: ms-ead-service-registry:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8761
+              name: http
+          envFrom:
+            - configMapRef:
+                name: ms-ead-service-registry
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "0.5"
+            limits:
+              memory: "1024Mi"
+              cpu: "1"
