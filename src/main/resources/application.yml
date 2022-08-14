@@ -1,5 +1,5 @@
 spring:
+  profiles:
+    active: prod
   application:
     name: ead-service-registry
-  profiles:
-    active: dev
